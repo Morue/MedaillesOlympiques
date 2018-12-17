@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>JO</display-name>
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>org.tutorial.servlets.loginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>logoutServlet</servlet-name>
+  	<servlet-class>org.tutorial.servlets.logoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>logoutServlet</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+ <error-page>
+    <error-code>404</error-code>
+    <location>/Erreur/erreur.jsp</location>
+ </error-page> 
+
+  <servlet-mapping>
+    <servlet-name>addAthleteServlet</servlet-name>
+    <url-pattern>/addAthlete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>addAthleteAndPalmaresServlet</servlet-name>
+    <servlet-class>org.tutorial.servlets.AddAthleteAndPalmaresServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addAthleteAndPalmaresServlet</servlet-name>
+    <url-pattern>/addAthleteAndPalmares</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>afficheAthletesServlet</servlet-name>
+    <servlet-class>org.tutorial.servlets.AfficheAthletesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>afficheAthletesServlet</servlet-name>
+    <url-pattern>/afficheAthletes</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
